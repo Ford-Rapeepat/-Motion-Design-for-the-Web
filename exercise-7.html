@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exercise #7 || Simple loading screen</title>
+
+	<!-- Reset -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap" rel="stylesheet">
+
+	<style>
+		html {
+			font-size: 16px;
+			font-family: 'Figtree', sans-serif;
+			line-height: 1.5;
+		}
+
+        #loading-screen {
+            background-color: #FFFBF1;
+			height: 100dvh;
+			display: grid;
+			place-content: center;
+			text-align: center;
+			gap: 2rem;
+			color: #62312d;
+        }
+
+        /* Air */
+        @keyframes breathe {
+           from {
+               transform: scale(1);
+           }
+            to {
+                transform: scale(1.2);
+            }
+        }
+        /* Earth */
+          
+        #loader-icon {
+            /* alternate กำหนดทิศทางการทำงานของอนิเมชันสลับไปมา 
+               reverse กลับจากจุดสิ้นสุดกลับมาจุดเริ่มต้นในทุกๆ รอบ
+               forwards ทำให้องค์ประกอบหยุดอยู่ในสถานะสุดท้ายของ keyframes หลังจากอนิเมชันสิ้นสุด */
+          animation: 3s ease-in-out infinite alternate  breathe ;
+        }
+	</style>
+</head>
+<body>
+    <div id="loading-screen">
+      <img id="loader-icon" src="https://i.pinimg.com/736x/df/73/bf/df73bf8047214eb258c645a8346f0d6c.jpg " width="400" height="400" alt="">
+
+	</div>
+</body>
+</html>
